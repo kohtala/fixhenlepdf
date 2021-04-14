@@ -1,0 +1,12 @@
+[build-system]
+requires = ["flit_core >=2,<4", "setuptools"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "fixhenlepdf"
+author = "Marko Kohtala"
+author-email = "marko.kohtala@gmail.com"
+classifiers = [ "License :: OSI Approved :: MIT License",]
+requires = [
+    "pikepdf"
+]
