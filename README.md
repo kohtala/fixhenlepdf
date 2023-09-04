@@ -7,22 +7,26 @@ for Android produces PDF files with wide margins.
 To make them printable, the margin needs to be removed. This tool scales pages
 of PDF with defaults to remove the margins of the Henle PDF.
 
-To install this tool, I assume you have already cloned this source and are in
-the folder with this `README.md`.
+The install steps you need to do the first time (some may be already done) are:
 
-* Install Python (3.11 or newer) with PIP
-* Create virtual environment
-* Activate the virtual environment
-* Install this source code in the virtual environment
-* Run the tool
-
-I assume you have already cloned this source On Windows this is in practice
-
-* Download from [python.org](https://www.python.org/downloads/) and install
+* Download and install git from https://git-scm.com/
+* Download 3.11+ from [python.org](https://www.python.org/downloads/) and install
+* Start command line and in it
+* git clone https://github.com/kohtala/fixhenlepdf
+* cd fixhenlepdf
 * py -m venv .venv
 * .venv\Scripts\activate
 * pip install .
-* python -m fixhenlepdf _the-original.pdf_
+
+On subsequent times you need to
+
+* Start command line, in it
+* cd fixhenlepdf
+* .venv\Scripts\activate
+
+You can then change directory (cd) to where you have the PDF files to fix and
+
+* py -m fixhenlepdf _the-original.pdf_
 
 The printable PDF should appear in the same folder with the original with
 `_print.pdf` suffix.
