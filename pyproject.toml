@@ -1,12 +1,29 @@
 [build-system]
-requires = ["flit_core >=2,<4", "setuptools"]
+requires = ["flit_core >=3.2,<4", "setuptools"]
 build-backend = "flit_core.buildapi"
 
-[tool.flit.metadata]
-module = "fixhenlepdf"
-author = "Marko Kohtala"
-author-email = "marko.kohtala@gmail.com"
-classifiers = [ "License :: OSI Approved :: MIT License",]
-requires = [
+[project]
+name = "fixhenlepdf"
+readme = "README.md"
+authors = [
+    {name = "Marko Kohtala", email = "marko.kohtala@gmail.com"},
+]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Printing",
+    "Topic :: Utilities",
+]
+license.file = "LICENSE"
+dependencies = [
     "pikepdf"
 ]
+requires-python = ">=3.8"
+dynamic = ['version', 'description']
+
+[project.scripts]
+fixhenlepdf = "fixhenlepdf:main"
+
+[project.urls]
+Source = "https://github.com/kohtala/fixhenlepdf"
